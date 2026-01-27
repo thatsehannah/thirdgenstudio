@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Quantico } from "next/font/google";
+import { Space_Grotesk, Tektur } from "next/font/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -7,10 +7,9 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const quantico = Quantico({
-  variable: "--font-quantico",
+const tektur = Tektur({
+  variable: "--font-tektur",
   subsets: ["latin"],
-  weight: "700",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className={`${spaceGrotesk.variable} ${quantico.variable}`}
+      className={`${spaceGrotesk.variable} ${tektur.variable}`}
     >
       <body className='bg-background text-foreground antialiased'>
         {children}
