@@ -18,14 +18,14 @@ export const Hero = () => {
           <div>
             <LinkButton
               text='View Projects'
-              className='bg-accent2 text-white text-lg font-medium'
+              className='bg-accent2 hover:shadow-accent2 hover:ring-1 hover:ring-accent1 text-white text-lg font-medium'
               target='projects'
             />
           </div>
           <div>
             <LinkButton
               text='Contact Us'
-              className='bg-gray-600/30 text-white text-lg font-extralight'
+              className='bg-gray-600/30 hover:shadow-white hover:ring-1 hover:ring-white text-white text-lg font-extralight'
               target='contact'
             />
           </div>
