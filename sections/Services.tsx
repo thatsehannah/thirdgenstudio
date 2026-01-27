@@ -5,7 +5,7 @@ import React from "react";
 export const Services = () => {
   return (
     <section id='services'>
-      <div className='px-8 pb-16'>
+      <div className='px-16 pb-16'>
         <p className='text-5xl font-main font-black'>
           Our <span className='text-accent3'>Services</span>
         </p>

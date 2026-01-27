@@ -1,5 +1,5 @@
+import { ProjectCard } from "@/components";
 import Image from "next/image";
-import React from "react";
 
 const AboutCard = ({ text, subText }: { text: string; subText: string }) => {
   return (
@@ -13,7 +13,7 @@ const AboutCard = ({ text, subText }: { text: string; subText: string }) => {
 export const About = () => {
   return (
     <section id='about'>
-      <div className='ring-1 ring-white/20 px-8 bg-radial-[at_95%_15%] from-white/20 to-background to-75%'>
+      <div className='ring-1 ring-white/20 px-16 bg-radial-[at_95%_15%] from-white/20 to-background to-75%'>
         <div className='flex justify-between py-24'>
           <div className='relative'>
             <div className='absolute -inset-2 rounded-lg bg-linear-to-r from-accent2 to-accent3 opacity-75 blur-lg animate-pulse'></div>
@@ -57,12 +57,27 @@ export const About = () => {
             </div>
           </div>
         </div>
-        <div className='px-8 pb-24'>
-          <div className='flex items-center gap-3'>
-            <p className='font-main text-3xl font-bold'>
+        <div
+          id='projects'
+          className='pb-24'
+        >
+          <div className='flex items-center gap-3 pb-12'>
+            <p className='font-main text-5xl font-bold'>
               Flagship <span className='text-accent3'>Creations</span>
             </p>
             <hr className='h-0.5 w-3/4 bg-linear-to-r from-accent3/40 to-background border-0 rounded-lg' />
+          </div>
+          <div className='flex justify-between items-center gap-32'>
+            <ProjectCard
+              title='ViceCity Go'
+              type='mobile'
+              link='https://www.google.com'
+            />
+            <ProjectCard
+              title='Neon Analytics'
+              type='web'
+              link='https://www.google.com'
+            />
           </div>
         </div>
       </div>
