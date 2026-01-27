@@ -3,10 +3,10 @@
 :root {
   --background: #211016;
   --foreground: #ffffff;
-  --accent1: #00b7d4;
-  --accent2: #f53384;
-  --accent3: #5ce1e6;
-  --accent4: #c083fc;
+  --accent1: oklch(0.717 0.126273 214.3985);
+  --accent2: oklch(0.6471 0.232 1.71);
+  --accent3: oklch(0.8389 0.1153 198.66);
+  --accent4: oklch(0.7201 0.1782 305.67);
 }
 
 @theme inline {

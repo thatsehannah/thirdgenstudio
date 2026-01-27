@@ -24,7 +24,6 @@ export const ProjectCard = ({
           alt='placeholder image'
           className='object-cover rounded-t-lg'
           fill
-          quality={100}
         />
         <div className='flex items-center gap-3 justify-center absolute bottom-4 left-4 rounded-2xl bg-slate-950 w-fit p-3'>
           {type === "mobile" ? (

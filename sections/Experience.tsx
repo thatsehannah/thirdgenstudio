@@ -1,3 +1,4 @@
+import { Timeline } from "@/components";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { experiences } from "@/data";
 import { Circle } from "lucide-react";
@@ -15,36 +16,15 @@ export const Experience = () => {
             A timeline of my journey through development
           </p>
         </div>
-        <div className='flex flex-col mt-24 w-3/4 mx-auto'>
-          {experiences.map((item, idx) => {
-            const evenItem = idx % 2 === 0;
-
-            return (
-              <div
-                key={idx}
-                className={`flex ${evenItem ? "justify-start" : "justify-end"} mb-8 gap-35`}
-              >
-                {!evenItem && (
-                  <div className='flex flex-col items-center mt-4'>
-                    <Circle className='fill-accent2 stroke-3 stroke-background shadow-md rounded-full shadow-accent2' />
-                    <div className='w-0.5 h-68 bg-linear-to-b from-white/20 to-transparent' />
-                  </div>
-                )}
-                <ExperienceCard
-                  item={item}
-                  leftAlign={evenItem}
-                  accentColor={evenItem ? "accent3" : "accent2"}
-                />
-                {evenItem && (
-                  <div className='flex flex-col items-center mt-4'>
-                    <Circle className='fill-accent3 stroke-3 stroke-background shadow-md rounded-full shadow-accent3' />
-                    <div className='w-0.5 h-68 bg-linear-to-b from-white/20 to-transparent' />
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <Timeline
+          items={experiences}
+          renderItem={(item) => (
+            <ExperienceCard
+              item={item}
+              leftAlign={experiences.indexOf(item) % 2 !== 0}
+            />
+          )}
+        />
       </div>
     </section>
   );

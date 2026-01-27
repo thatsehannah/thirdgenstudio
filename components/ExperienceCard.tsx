@@ -2,28 +2,27 @@ import { ExperienceItem } from "@/types";
 import { Banner } from "@/components";
 
 interface ExperienceCardProps {
-  accentColor: "accent3" | "accent2";
   leftAlign: boolean;
   item: ExperienceItem;
 }
 
-export const ExperienceCard = ({
-  accentColor,
-  leftAlign,
-  item,
-}: ExperienceCardProps) => {
+export const ExperienceCard = ({ leftAlign, item }: ExperienceCardProps) => {
   return (
     <div
-      className={`rounded-lg ring-1 ring-white/20 ${leftAlign ? "bg-linear-to-r from-background to-white/10" : "bg-linear-to-l from-background to-white/10"} w-130`}
+      className={`rounded-lg ring-1 ring-white/20 ${leftAlign ? "bg-linear-to-r from-background to-white/10" : "bg-linear-to-l from-background to-white/10"}`}
     >
       <div
         className={`flex flex-col ${leftAlign ? "items-start" : "items-end"} p-4`}
       >
-        <Banner className={`border-${accentColor} bg-${accentColor}/20`}>
+        <Banner
+          className={`${leftAlign ? "border-accent2 bg-accent2/30" : "border-accent3 bg-accent3/30"}`}
+        >
           <p className='font-bold font-main'>{item.startEndYear}</p>
         </Banner>
         <p className='font-main font-bold text-2xl'>{item.position}</p>
-        <p className={`font-main text-lg text-${accentColor} mb-2`}>
+        <p
+          className={`font-main text-lg ${leftAlign ? "text-accent2" : "text-accent3"} mb-2`}
+        >
           {item.company}
         </p>
         <p

@@ -22,4 +22,11 @@ export const experiences: ExperienceItem[] = [
     duties:
       "Built responsive web application using React and Tailwind CSS. Optimized frontend performance resulting in 40% faster load times",
   },
+  {
+    position: "Frontend Developer",
+    company: "VaporWave Inc.",
+    startEndYear: "2018 - 2020",
+    duties:
+      "Built responsive web application using React and Tailwind CSS. Optimized frontend performance resulting in 40% faster load times",
+  },
 ];
