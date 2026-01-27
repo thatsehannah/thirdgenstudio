@@ -2,7 +2,10 @@ import { Banner, LinkButton, Logo } from "@/components";
 
 export const Hero = () => {
   return (
-    <section className='w-screen h-screen flex justify-center items-center'>
+    <section
+      id='hero'
+      className='w-screen h-screen flex justify-center items-center'
+    >
       <div className='w-1/2 flex flex-col justify-center items-center p-4'>
         <Banner />
         <Logo />
