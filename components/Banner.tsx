@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-type BannerProps = {
+interface BannerProps {
   className: string;
   children: ReactNode;
-};
+}
 
 export const Banner = ({ className, children }: BannerProps) => {
   return (

@@ -1,10 +1,8 @@
-import React from "react";
-
-type LinkButtonProps = {
+interface LinkButtonProps {
   className: string;
   text: string;
   target: string;
-};
+}
 
 export const LinkButton = ({ className, text, target }: LinkButtonProps) => {
   return (

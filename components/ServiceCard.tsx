@@ -1,10 +1,10 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
-type ServiceCardProps = {
+interface ServiceCardProps {
   title: string;
   icon: ReactNode;
   description?: string;
-};
+}
 
 export const ServiceCard = ({ title, icon, description }: ServiceCardProps) => {
   return (

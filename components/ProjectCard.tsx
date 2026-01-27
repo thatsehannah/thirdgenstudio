@@ -1,6 +1,13 @@
 import { ArrowUpRight, Monitor, Smartphone } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+
+interface ProjectCardProps {
+  thumbnail?: string;
+  title: string;
+  type: "mobile" | "web";
+  description?: string;
+  link: string;
+}
 
 export const ProjectCard = ({
   thumbnail,
@@ -8,13 +15,7 @@ export const ProjectCard = ({
   type,
   description,
   link,
-}: {
-  thumbnail?: string;
-  title: string;
-  type: "mobile" | "web";
-  description?: string;
-  link: string;
-}) => {
+}: ProjectCardProps) => {
   return (
     <div className='border-8 border-slate-950 rounded-2xl w-2/3'>
       <div className='w-full h-112 relative'>

@@ -1,6 +1,5 @@
 import { ServiceCard } from "@/components";
 import { Code, Palette, Smartphone } from "lucide-react";
-import React from "react";
 
 export const Services = () => {
   return (
