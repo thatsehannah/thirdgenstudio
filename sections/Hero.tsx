@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <section id='hero'>
       <div className='h-screen flex flex-col justify-center items-center -mt-12 md:mt-0 lg:p-8 xl:p-12'>
-        <Banner className='gap-2 border-accent3 bg-accent3/20'>
+        <Banner className='gap-2 border-accent3 bg-accent3/20 mb-12'>
           <Circle
             className='fill-accent3 border-0 stroke-0 animate-pulse'
             size={16}

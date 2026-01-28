@@ -13,7 +13,7 @@ const AboutCard = ({ text, subText }: { text: string; subText: string }) => {
 export const About = () => {
   return (
     <section id='about'>
-      <div className='ring-1 ring-neutral-700 px-8 lg:px-16 bg-radial-[at_95%_15%] from-neutral-700 to-background to-75%'>
+      <div className='px-8 lg:px-16 pb-16 ring-1 ring-neutral-700 bg-radial-[at_95%_15%] from-neutral-700 to-background to-75%'>
         <div className='flex flex-col lg:flex-row lg:gap-16 xl:gap-32 justify-between items-center py-24'>
           <div className='relative h-fit'>
             <div className='absolute -inset-2 rounded-lg bg-linear-to-r from-accent2 to-accent3 opacity-75 blur-lg animate-pulse'></div>
@@ -57,10 +57,7 @@ export const About = () => {
             </div>
           </div>
         </div>
-        <div
-          id='projects'
-          className='pb-24'
-        >
+        <div id='projects'>
           <div className='flex justify-center items-center gap-2 pb-12'>
             <p className='font-main text-3xl lg:text-4xl xl:text-5xl text-nowrap font-bold'>
               Flagship <span className='text-accent3'>Creations</span>

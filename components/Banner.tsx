@@ -8,7 +8,7 @@ interface BannerProps {
 export const Banner = ({ className, children }: BannerProps) => {
   return (
     <div
-      className={`${className} rounded-full flex justify-center items-center border text-center py-2.5 px-6 w-fit mb-12`}
+      className={`${className} rounded-full flex justify-center items-center border text-center py-2.5 px-6 w-fit`}
     >
       {children}
     </div>
