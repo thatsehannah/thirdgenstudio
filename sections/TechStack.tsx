@@ -13,7 +13,7 @@ export const TechStack = () => {
             Powered by the most reliable modern technologies.
           </p>
         </div>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 xl:gap-4 mt-24'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 xl:gap-4 mt-16 xl:mt-24'>
           {techStack.map((item, idx) => (
             <TechCard
               title={item.title}

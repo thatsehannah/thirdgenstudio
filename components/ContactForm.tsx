@@ -6,7 +6,7 @@ import { Send } from "lucide-react";
 export const ContactForm = () => {
   return (
     <div className='mt-12 flex flex-col w-full gap-8'>
-      <div className='flex justify-between gap-3 w-full'>
+      <div className='flex flex-col lg:flex-row justify-between gap-8 lg:gap-3 w-full'>
         <InputField
           label='name'
           type='text'
