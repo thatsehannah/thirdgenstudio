@@ -4,13 +4,13 @@ export const Logo = () => {
       <div className='flex flex-col justify-center items-center gap-2'>
         <div className='flex'>
           <div className='relative'>
-            <p className='absolute text-9xl font-extrabold text-transparent bg-linear-to-r from-accent3 via-white to-accent2 bg-clip-text blur-xl opacity-40 font-logo'>
+            <p className='absolute text-9xl font-extrabold text-transparent bg-linear-to-r from-accent3 from-30% via-white to-accent2 bg-clip-text blur-xl opacity-40 font-logo'>
               TECH
             </p>
-            <p className='absolute text-9xl font-extrabold text-transparent bg-linear-to-r from-accent3 via-white to-accent2 bg-clip-text blur-xl opacity-80 font-logo'>
+            <p className='absolute text-9xl font-extrabold text-transparent bg-linear-to-r from-accent3 from-30% via-white to-accent2 bg-clip-text blur-xl opacity-80 font-logo'>
               TECH
             </p>
-            <p className='relative text-9xl font-extrabold text-transparent bg-linear-to-r from-accent3 via-white to-accent2 bg-clip-text inline-block pb-1 pr-4 font-logo italic'>
+            <p className='relative text-9xl font-extrabold text-transparent bg-linear-to-r from-accent3 from-30% via-white to-accent2 bg-clip-text inline-block pb-1 pr-4 font-logo italic'>
               TECH
             </p>
           </div>
