@@ -17,7 +17,7 @@ export const ProjectCard = ({
   link,
 }: ProjectCardProps) => {
   return (
-    <div className='border-8 border-neutral-950 rounded-2xl w-2/3'>
+    <div className='border-8 border-neutral-950 rounded-2xl lg:w-2/3'>
       <div className='w-full h-112 relative'>
         <Image
           src='/placeholder-img.jpg'
