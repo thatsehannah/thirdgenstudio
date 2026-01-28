@@ -25,7 +25,7 @@ export const About = () => {
               width={800}
             />
           </div>
-          <div className='flex flex-col justify-center py-4 lg:w-1/2 mt-12 md:mt-0'>
+          <div className='flex flex-col justify-center py-4 lg:w-1/2 mt-12 lg:mt-0'>
             <div className='flex items-center gap-4 mb-8'>
               <hr className='h-0.5 w-24 border-0 rounded-xl bg-accent2' />
               <p className='uppercase text-accent2 font-main text-lg'>
