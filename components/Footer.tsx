@@ -57,7 +57,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className='flex flex-col justify-center items-center bg-black py-8'>
-        <div className='flex gap-16 mb-8'>
+        <div className='flex gap-8 lg:gap-12 xl:gap-16 mb-8'>
           {socials.map((item, idx) => (
             <SocialIcon
               key={idx}
@@ -67,7 +67,7 @@ export const Footer = () => {
             />
           ))}
         </div>
-        <p className='text-sm font-main font-regular text-neutral-700'>
+        <p className='text-xs lg:text-sm font-main font-regular text-neutral-700'>
           {new Date().getFullYear()} TECH<sup>3</sup>. Made in the A. All rights
           reserved.
         </p>
