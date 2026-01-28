@@ -7,6 +7,7 @@ import { Timeline } from "./Timeline.tsx";
 import { InputField } from "./InputField.tsx";
 import { TextareaField } from "./TextareaField.tsx";
 import { ContactForm } from "./ContactForm.tsx";
+import { Footer } from "./Footer.tsx";
 
 export {
   Logo,
@@ -18,4 +19,5 @@ export {
   InputField,
   TextareaField,
   ContactForm,
+  Footer,
 };

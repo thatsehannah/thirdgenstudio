@@ -1,3 +1,4 @@
+import { Footer } from "@/components";
 import {
   About,
   Contact,
@@ -16,6 +17,7 @@ export default function Home() {
       <Experience />
       <TechStack />
       <Contact />
+      <Footer />
     </main>
   );
 }
