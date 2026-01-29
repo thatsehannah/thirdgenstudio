@@ -20,7 +20,7 @@ export const ProjectCard = ({
     <div className='border-8 border-neutral-950 rounded-2xl lg:w-2/3'>
       <div className='w-full h-112 relative'>
         <Image
-          src='/placeholder-img.jpg'
+          src='/images/placeholder-img.jpg'
           alt='placeholder image'
           className='object-cover rounded-t-lg'
           fill

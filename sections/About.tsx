@@ -18,7 +18,7 @@ export const About = () => {
           <div className='relative h-fit'>
             <div className='absolute -inset-2 rounded-lg bg-linear-to-r from-accent2 to-accent3 opacity-75 blur-lg animate-pulse'></div>
             <Image
-              src='/placeholder-img.jpg'
+              src='/images/about.jpg'
               alt='placeholder image'
               className='relative rounded-3xl'
               height={600}
