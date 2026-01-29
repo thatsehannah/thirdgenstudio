@@ -3,7 +3,10 @@ import { Circle } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section id='hero'>
+    <section
+      id='hero'
+      className='bg-grid-fade'
+    >
       <div className='h-screen flex flex-col justify-center items-center -mt-12 md:mt-0 lg:p-8 xl:p-12'>
         <Banner className='gap-2 border-accent3 bg-accent3/20 mb-12'>
           <Circle
@@ -19,11 +22,12 @@ export const Hero = () => {
         </p>
         <Logo />
         <div className='mt-4 xl:mt-6 w-3/4 lg:w-1/2'>
-          <p className='font-main text-neutral-400 text-center text-[1rem] lg:text-lg xl:text-xl'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis cupiditate quia mollitia. Consequatur id ipsum, qui
-            autem deleniti blanditiis velit vel magnam recusandae doloremque
-            maxime neque corporis ab corrupti odit?
+          <p className='font-main text-neutral-400 lg:text-center text-justify text-[1rem] lg:text-lg xl:text-2xl xl:font-light'>
+            Modern web solutions with precision from concept to deployment.{" "}
+            <br className='hidden lg:inline-block' /> We craft digital
+            experiences that engage users and drive measurable results.{" "}
+            <em>No fluff, no shortcuts.</em> Just thoughtful engineering and
+            pixel-perfect execution. Your vision, brought to life.
           </p>
         </div>
         <div className='flex justify-center items-center gap-12 p-4 mt-8 xl:mt-12'>
