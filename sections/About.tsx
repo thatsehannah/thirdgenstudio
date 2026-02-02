@@ -30,7 +30,7 @@ export const About = () => {
             <div className='flex items-center gap-4 mb-8'>
               <hr className='h-0.5 w-24 border-0 rounded-xl bg-accent2' />
               <p className='uppercase text-accent2 font-main text-lg'>
-                behind the code
+                behind the engineer
               </p>
             </div>
             <p className='text-5xl xl:text-6xl font-main font-bold'>
@@ -40,12 +40,12 @@ export const About = () => {
               </span>
             </p>
             <p className='font-main text-lg xl:text-xl text-neutral-400 mt-8 leading-8'>
-              I&apos;m a full-stack developer with a passion for building clean,
+              I&apos;m a full-stack engineer with a passion for building clean,
               user-focused web products. Every project gets my full attention
               from start to finish because great software comes from
-              understanding the problem deeply and never settling for &apos;good
-              enough.&apos; When you work with me, you get direct collaboration
-              with the person writing every line of code.
+              understanding the problem deeply and never settling for
+              &ldquo;good enough&rdquo; When you work with me, you get direct
+              collaboration with the person writing every line of code.
             </p>
             <div className='flex justify-between mt-9'>
               <AboutCard
@@ -66,7 +66,7 @@ export const About = () => {
             </p>
             <hr className='h-0.5 w-3/4 bg-linear-to-r from-accent3/30 to-transparent border-0 rounded-lg' />
           </div>
-          <div className='flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16 xl:gap-32'>
+          <div className='flex flex-col lg:flex-row justify-between items-stretch h-full gap-8 lg:gap-16 xl:gap-32'>
             {projects.map((item) => (
               <ProjectCard
                 key={item.title}
