@@ -23,7 +23,7 @@ export const Hero = () => {
         <Logo />
         <div className='mt-4 xl:mt-6 w-3/4 lg:w-1/2'>
           <p className='font-main text-neutral-400 lg:text-center text-justify text-[1rem] lg:text-lg xl:text-xl xl:font-light'>
-            Modern web solutions with precision from concept to deployment.{" "}
+            Building web and mobile products the right way.
             <br className='hidden lg:inline-block' /> I am dedicated to building
             digital experiences that engage users and deliver real results.{" "}
             <em>No fluff, no shortcuts.</em> Just thoughtful engineering and
