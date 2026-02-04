@@ -1,9 +1,11 @@
+"use client";
+
 import { HTMLInputTypeAttribute } from "react";
+import { useFormContext } from "react-hook-form";
 
 interface InputFieldProps {
   label: string;
   name: string;
-  id: string;
   placeholder: string;
   type: HTMLInputTypeAttribute;
 }
@@ -11,22 +13,35 @@ interface InputFieldProps {
 export const InputField = ({
   label,
   name,
-  id,
   placeholder,
   type,
 }: InputFieldProps) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+  const error = errors[name];
+
   return (
     <div className='flex flex-col w-full'>
-      <p className='uppercase text-sm text-neutral-400 font-main font-bold mb-2'>
+      <label
+        htmlFor={name}
+        className='uppercase text-sm text-neutral-400 font-main font-bold mb-2'
+      >
         {label}
-      </p>
+      </label>
       <input
         type={type}
-        name={name}
-        id={id}
-        className='ring-1 ring-neutral-700 w-full p-2 rounded-md font-main focus:border-2 focus:border-accent4 focus:outline-0 focus:ring-0'
+        id={name}
+        className='ring-1 ring-neutral-700 p-2 rounded-md font-main focus:border-2 focus:border-accent4 focus:outline-0 focus:ring-0'
         placeholder={placeholder}
+        {...register(name)}
       />
+      {error && (
+        <p className='font-bold font-main text-accent1 mt-1.5'>
+          {error.message as string}
+        </p>
+      )}
     </div>
   );
 };
