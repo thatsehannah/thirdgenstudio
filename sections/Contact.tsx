@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components";
+import { CircleCheckBig } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -16,6 +17,12 @@ export const Contact = () => {
             Ready to start your project? Drop me a line.
           </p>
           <ContactForm />
+          <div className='sonner opacity-0 bg-accent1 flex items-center justify-center gap-2 p-2 rounded-md mt-4'>
+            <CircleCheckBig className='stroke-white stroke-2 fill-green-600' />
+            <p className='font-main font-bold text-sm lg:text-[1rem]'>
+              Thanks. I&apos;ll be in contact soon.
+            </p>
+          </div>
         </div>
       </div>
     </section>

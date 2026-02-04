@@ -37,8 +37,8 @@ export const techStack: { title: string; logo: string; link: string }[] = [
     link: "https://github.com/",
   },
   {
-    title: "Firebase",
-    logo: "/logos/firebase.svg",
-    link: "https://firebase.google.com/",
+    title: "GCP",
+    logo: "/logos/gcp.svg",
+    link: "https://cloud.google.com/",
   },
 ];
