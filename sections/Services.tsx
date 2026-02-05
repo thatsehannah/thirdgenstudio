@@ -1,11 +1,79 @@
-import { ServiceCard } from "@/components";
-import { Code, Palette, Smartphone } from "lucide-react";
+"use client";
 
-//TODO: change "Our Services" text
+import { ServiceCard } from "@/components";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Code, Palette, Smartphone } from "lucide-react";
+import { useRef } from "react";
+
 export const Services = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      const video = videoRef.current;
+      const section = sectionRef.current;
+      if (!video || !section) return;
+
+      const initScrollAnimation = () => {
+        const duration = video.duration;
+
+        const mainTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "+=550%",
+            pin: true,
+            scrub: true,
+          },
+        });
+
+        mainTl
+          .to(video, {
+            currentTime: duration,
+            ease: "none",
+            duration: 1.2,
+            filter: "brightness(1)",
+          })
+          .to(video, {
+            filter: "brightness(0.3)",
+            duration: 0.2,
+            ease: "power2.out",
+          })
+          .fromTo(
+            ".services",
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.3 },
+          );
+      };
+
+      if (video.readyState >= 2) {
+        initScrollAnimation();
+      } else {
+        video.addEventListener("loadedmetadata", initScrollAnimation, {
+          once: true,
+        });
+      }
+    },
+    { scope: sectionRef },
+  );
+
   return (
-    <section id='services'>
-      <div className='px-8 lg:px-16 pb-16'>
+    <section
+      id='services'
+      className='relative h-screen flex items-center overflow-hidden'
+      ref={sectionRef}
+    >
+      <video
+        src='/videos/output.mp4'
+        ref={videoRef}
+        muted
+        playsInline
+        preload='metadata'
+        className='w-full h-full inset-0 absolute object-cover brightness-0'
+      />
+      <div className='services px-8 lg:px-16 pb-16'>
         <p className='text-4xl lg:text-5xl font-main font-black'>
           Areas of <span className='text-accent3'>Expertise 👨🏾‍🎨</span>
         </p>

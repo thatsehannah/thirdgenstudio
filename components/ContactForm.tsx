@@ -7,7 +7,6 @@ import { FormProvider, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 //TODO: install and use resend for sending emails
 const contactSchema = yup.object({

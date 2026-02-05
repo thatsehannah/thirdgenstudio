@@ -8,6 +8,7 @@ import { InputField } from "./InputField.tsx";
 import { TextareaField } from "./TextareaField.tsx";
 import { ContactForm } from "./ContactForm.tsx";
 import { Footer } from "./Footer.tsx";
+import { GSAPProvider } from "./GSAPProvider.tsx";
 
 export {
   Logo,
@@ -20,4 +21,5 @@ export {
   TextareaField,
   ContactForm,
   Footer,
+  GSAPProvider,
 };

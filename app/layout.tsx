@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Tektur } from "next/font/google";
 import "./globals.css";
+import { GSAPProvider } from "@/components";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -28,7 +29,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${tektur.variable}`}
     >
       <body className='bg-background text-foreground antialiased'>
-        {children}
+        <GSAPProvider>{children}</GSAPProvider>
       </body>
     </html>
   );

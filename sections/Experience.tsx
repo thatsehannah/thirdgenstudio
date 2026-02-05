@@ -15,7 +15,7 @@ export const Experience = () => {
           </p>
         </div>
         <Timeline
-          items={experiences}
+          items={experiences.reverse()}
           renderItem={(item) => (
             <ExperienceCard
               item={item}
