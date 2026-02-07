@@ -16,7 +16,7 @@ export const projects: ProjectItem[] = [
     thumbnail: "/images/thesoulcialwell.png",
     type: "web",
     description:
-      "Building an online presence for The Soulcial Well, a community organization focused on holistic well-being, connection, and creativity. Designed to bring their mission to life and connect them with their community.",
+      "Building an online presence for The Soulcial Well, a community wellness organization focused on holistic well-being, connection, and creativity. Designed to bring their mission to life and connect them with their community.",
     linkText: "Visit Website",
     link: "https://thesoulcialwell.org",
   },

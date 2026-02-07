@@ -131,7 +131,7 @@ export const About = () => {
             </p>
             <hr className='h-0.5 w-3/4 bg-linear-to-r from-accent3/30 to-transparent border-0 rounded-lg' />
           </div>
-          <div className='flex flex-col lg:flex-row justify-between items-stretch h-full gap-8 lg:gap-16 xl:gap-32'>
+          <div className='flex flex-col lg:flex-row lg:justify-evenly h-full gap-8 lg:gap-16 xl:gap-32'>
             {projects.map((item) => (
               <ProjectCard
                 key={item.title}

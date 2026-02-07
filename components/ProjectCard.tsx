@@ -19,13 +19,13 @@ export const ProjectCard = ({
   linkText,
 }: ProjectCardProps) => {
   return (
-    <div className='border-8 border-neutral-950 rounded-2xl w-full lg:w-2/3'>
+    <div className='border-8 border-neutral-950 rounded-2xl w-fit lg:w-lg'>
       <div className='w-full'>
         <div className='relative'>
           <Image
             src={thumbnail}
             alt={`${title} image`}
-            className='h-auto w-full lg:h-112 2xl:h-130 lg:object-cover object-contain rounded-t-lg'
+            className='h-auto w-full object-contain rounded-t-lg'
             width={800}
             height={600}
           />
