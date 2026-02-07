@@ -1,9 +1,50 @@
+"use client";
+
 import { TechCard } from "@/components/TechCard";
 import { techStack } from "@/data";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap/all";
+import { useRef } from "react";
 
 export const TechStack = () => {
+  const containerRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      gsap.fromTo(
+        ".tech-card",
+        {
+          y: -45,
+          autoAlpha: 0,
+          scale: 1.2,
+        },
+        {
+          y: 0,
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.5,
+          stagger: 0.2,
+          ease: "power3.in",
+          transformOrigin: "top center",
+          clearProps: "transform",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+          },
+        },
+      );
+    },
+    { scope: containerRef },
+  );
+
   return (
-    <section id='techstack'>
+    <section
+      ref={containerRef}
+      id='techstack'
+    >
       <div className='px-8 lg:px-16 pt-6 lg:pt-10 pb-24 lg:pb-32'>
         <div className='flex flex-col justify-center items-center mx-auto w-fit'>
           <p className='text-5xl font-main font-bold mb-4 text-center'>
