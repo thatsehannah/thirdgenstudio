@@ -1,7 +1,8 @@
 "use client";
 
 import { useGSAP } from "@gsap/react";
-import gsap, { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -32,9 +33,9 @@ export const SlotMachineCard = ({
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
+          start: "top 85%",
+          end: "top 20%",
+          toggleActions: "play none none reverse",
         },
       });
 

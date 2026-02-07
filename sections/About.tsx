@@ -4,7 +4,8 @@ import { ProjectCard } from "@/components";
 import { SlotMachineCard } from "@/components/SlotMachineCard";
 import { projects } from "@/data";
 import { useGSAP } from "@gsap/react";
-import gsap, { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -56,10 +57,6 @@ export const About = () => {
             autoAlpha: 1,
             duration: 1.8,
             ease: "power1.inOut",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 70%",
-            },
           },
           0.4,
         );
