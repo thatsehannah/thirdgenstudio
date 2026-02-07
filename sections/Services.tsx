@@ -20,6 +20,8 @@ export const Services = () => {
       if (!video || !section) return;
 
       const initScrollAnimation = () => {
+        ScrollTrigger.refresh(true);
+
         const duration = video.duration;
 
         const mainTl = gsap.timeline({
@@ -74,6 +76,7 @@ export const Services = () => {
       <video
         src='/videos/output.mp4'
         ref={videoRef}
+        onLoadedData={() => ScrollTrigger.refresh(true)}
         muted
         playsInline
         preload='metadata'

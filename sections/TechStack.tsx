@@ -36,6 +36,7 @@ export const TechStack = () => {
           scrollTrigger: {
             trigger: container,
             start: "top 80%",
+            invalidateOnRefresh: true,
           },
         },
       );

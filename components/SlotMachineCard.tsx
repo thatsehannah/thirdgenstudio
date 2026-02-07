@@ -30,12 +30,15 @@ export const SlotMachineCard = ({
 
       if (!container || !slot || !wrapper) return;
 
+      const initAnimation = () => {};
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
           start: "top 85%",
           end: "top 20%",
           toggleActions: "play none none reverse",
+          invalidateOnRefresh: true,
         },
       });
 

@@ -19,47 +19,56 @@ export const About = () => {
       const section = sectionRef.current;
       if (!section) return;
 
-      const aboutTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top 70%",
-        },
-      });
+      const initAnimation = () => {
+        ScrollTrigger.refresh(true);
 
-      aboutTl
-        .from(
-          ".about-hr",
-          {
-            width: 0,
-            duration: 1.2,
-            ease: "power1.inOut",
+        const aboutTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: "top 70%",
+            invalidateOnRefresh: true,
           },
-          0,
-        )
-        .from(
-          ".about-title",
-          {
-            x: 50,
-            autoAlpha: 0,
-            duration: 1.2,
-            ease: "power1.inOut",
-          },
-          0,
-        )
-        .fromTo(
-          ".about-gradient",
-          {
-            clipPath: "inset(0% 0% 100% 0%)",
-            autoAlpha: 0,
-          },
-          {
-            clipPath: "inset(0% 0% 0% 0%)",
-            autoAlpha: 1,
-            duration: 1.8,
-            ease: "power1.inOut",
-          },
-          0.4,
-        );
+        });
+
+        aboutTl
+          .from(
+            ".about-hr",
+            {
+              width: 0,
+              duration: 1.2,
+              ease: "power1.inOut",
+            },
+            0,
+          )
+          .from(
+            ".about-title",
+            {
+              x: 50,
+              autoAlpha: 0,
+              duration: 1.2,
+              ease: "power1.inOut",
+            },
+            0,
+          )
+          .fromTo(
+            ".about-gradient",
+            {
+              clipPath: "inset(0% 0% 100% 0%)",
+              autoAlpha: 0,
+            },
+            {
+              clipPath: "inset(0% 0% 0% 0%)",
+              autoAlpha: 1,
+              duration: 1.8,
+              ease: "power1.inOut",
+            },
+            0.4,
+          );
+      };
+
+      const timeout = setTimeout(initAnimation, 500);
+
+      return () => clearTimeout(timeout);
     },
 
     { scope: sectionRef },
