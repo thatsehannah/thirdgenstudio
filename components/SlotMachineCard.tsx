@@ -53,7 +53,7 @@ export const SlotMachineCard = ({
         "<",
       );
     },
-    { scope: slotRef },
+    { scope: containerRef },
   );
 
   return (
