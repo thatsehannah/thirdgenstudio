@@ -3,7 +3,7 @@
 import { ServiceCard } from "@/components";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/all";
 import { Code, Palette, Smartphone } from "lucide-react";
 import { useRef } from "react";
 
