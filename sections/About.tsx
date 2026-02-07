@@ -1,20 +1,12 @@
 "use client";
 
 import { ProjectCard } from "@/components";
+import { SlotMachineCard } from "@/components/SlotMachineCard";
 import { projects } from "@/data";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
-
-const AboutCard = ({ text, subText }: { text: string; subText: string }) => {
-  return (
-    <div className='flex flex-col p-6 ring-1 ring-neutral-700 w-2/5 bg-background rounded-md'>
-      <p className='text-4xl font-main font-black mb-1'>{text}</p>
-      <p className='text-sm font-main text-gray-300 uppercase'>{subText}</p>
-    </div>
-  );
-};
 
 export const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -113,13 +105,15 @@ export const About = () => {
               collaboration with the person writing every line of code.
             </p>
             <div className='flex justify-between mt-9'>
-              <AboutCard
-                text='5+'
-                subText='years experience'
+              <SlotMachineCard
+                target={7}
+                suffix='+'
+                subtext='years experience'
               />
-              <AboutCard
-                text='50+'
-                subText='projects delivered'
+              <SlotMachineCard
+                target={6}
+                suffix='+'
+                subtext='projects delivered'
               />
             </div>
           </div>

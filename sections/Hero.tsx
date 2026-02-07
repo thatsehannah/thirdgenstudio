@@ -77,11 +77,11 @@ export const Hero = () => {
         </div>
         <div className='mt-4 xl:mt-6 w-3/4 lg:w-1/2'>
           <p className='intro font-main text-neutral-400 lg:text-center text-justify text-[1rem] lg:text-lg xl:text-xl xl:font-light'>
-            Building web and mobile products the right way. <br /> I am
-            dedicated to building digital experiences that engage users and
-            deliver real results. <em>No fluff, no shortcuts.</em> Just
-            thoughtful engineering and pixel-perfect execution. Your vision,
-            brought to <span className='font-black italic'>life</span>.
+            Building web and mobile products the right way. I am dedicated to
+            building digital experiences that engage users and deliver real
+            results. <em>No fluff, no shortcuts.</em> Just thoughtful
+            engineering and pixel-perfect execution. Your vision, brought to{" "}
+            <span className='font-black italic'>life</span>.
           </p>
         </div>
         <div className='cta-buttons flex justify-center items-center gap-12 p-4 mt-8 xl:mt-12'>
