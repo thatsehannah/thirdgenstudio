@@ -17,29 +17,35 @@ export const TechStack = () => {
       const container = containerRef.current;
       if (!container) return;
 
-      gsap.fromTo(
-        ".tech-card",
-        {
-          y: -45,
-          autoAlpha: 0,
-          scale: 1.2,
-        },
-        {
-          y: 0,
-          autoAlpha: 1,
-          scale: 1,
-          duration: 0.5,
-          stagger: 0.2,
-          ease: "power3.in",
-          transformOrigin: "top center",
-          clearProps: "transform",
-          scrollTrigger: {
-            trigger: container,
-            start: "top 80%",
-            invalidateOnRefresh: true,
+      const initAnimation = () => {
+        gsap.fromTo(
+          ".tech-card",
+          {
+            y: -45,
+            autoAlpha: 0,
+            scale: 1.2,
           },
-        },
-      );
+          {
+            y: 0,
+            autoAlpha: 1,
+            scale: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: "power3.in",
+            transformOrigin: "top center",
+            clearProps: "transform",
+            scrollTrigger: {
+              trigger: container,
+              start: "top 80%",
+              invalidateOnRefresh: true,
+            },
+          },
+        );
+      };
+
+      const timeout = setTimeout(initAnimation, 800);
+
+      return () => clearTimeout(timeout);
     },
     { scope: containerRef },
   );
