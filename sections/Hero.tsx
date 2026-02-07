@@ -4,14 +4,10 @@ import { Banner, LinkButton, Logo } from "@/components";
 import { Circle } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/all";
 
 export const Hero = () => {
   useGSAP(() => {
     const onLoadTl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-    const taglineSplit = SplitText.create(".tagline", {
-      type: "chars, words, lines",
-    });
 
     onLoadTl
       .from(
@@ -37,20 +33,14 @@ export const Hero = () => {
         { opacity: 1, duration: 1.3, delay: 2.5 },
         0,
       )
-
-      .from(
-        taglineSplit.chars,
-        { x: 100, autoAlpha: 0, duration: 1, delay: 3.8, stagger: 0.02 },
-        0,
-      )
-      .from(".intro", { y: 100, autoAlpha: 0, duration: 1, delay: 5.3 }, 0)
+      .from(".intro", { autoAlpha: 0, duration: 1.3, delay: 3.6 }, 0)
       .from(
         ".cta-buttons a",
         {
           y: 100,
           opacity: 0,
           duration: 1.5,
-          delay: 6,
+          delay: 4.7,
           stagger: 0.2,
           ease: "power3.out",
         },
@@ -59,7 +49,7 @@ export const Hero = () => {
       .fromTo(
         ".hire-banner",
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, delay: 7.5, duration: 0.7 },
+        { opacity: 1, y: 0, delay: 5.9, duration: 0.7 },
         0,
       );
   });
@@ -67,7 +57,7 @@ export const Hero = () => {
   return (
     <section
       id='hero'
-      className='bg-grid-fade mask-x-from-90% mask-x-to-100% mask-y-from-80% mask-y-to-100%'
+      className='bg-grid-fade h-screen mask-x-from-90% mask-x-to-100% mask-y-from-80% mask-y-to-100%'
     >
       <div className='h-screen flex flex-col justify-center items-center -mt-12 md:mt-0 lg:p-8 xl:p-12'>
         <Banner className='hire-banner gap-2 border-accent3 bg-accent3/20 mb-12'>
@@ -86,16 +76,12 @@ export const Hero = () => {
           <Logo />
         </div>
         <div className='mt-4 xl:mt-6 w-3/4 lg:w-1/2'>
-          <p className='font-main text-neutral-400 lg:text-center text-justify text-[1rem] lg:text-lg xl:text-xl xl:font-light'>
-            <span className='tagline'>
-              Building web and mobile products the right way.
-            </span>
-            <span className='intro'>
-              I am dedicated to building digital experiences that engage users
-              and deliver real results. <em>No fluff, no shortcuts.</em> Just
-              thoughtful engineering and pixel-perfect execution. Your vision,
-              brought to <span className='font-black italic'>life</span>.
-            </span>
+          <p className='intro font-main text-neutral-400 lg:text-center text-justify text-[1rem] lg:text-lg xl:text-xl xl:font-light'>
+            Building web and mobile products the right way. <br /> I am
+            dedicated to building digital experiences that engage users and
+            deliver real results. <em>No fluff, no shortcuts.</em> Just
+            thoughtful engineering and pixel-perfect execution. Your vision,
+            brought to <span className='font-black italic'>life</span>.
           </p>
         </div>
         <div className='cta-buttons flex justify-center items-center gap-12 p-4 mt-8 xl:mt-12'>

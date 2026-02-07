@@ -1,6 +1,11 @@
+"use client";
+
 import { ProjectCard } from "@/components";
 import { projects } from "@/data";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap/all";
 import Image from "next/image";
+import { useRef } from "react";
 
 const AboutCard = ({ text, subText }: { text: string; subText: string }) => {
   return (
@@ -12,8 +17,68 @@ const AboutCard = ({ text, subText }: { text: string; subText: string }) => {
 };
 
 export const About = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      const section = sectionRef.current;
+      if (!section) return;
+
+      const aboutTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 70%",
+        },
+      });
+
+      aboutTl
+        .from(
+          ".about-hr",
+          {
+            width: 0,
+            duration: 1.2,
+            ease: "power1.inOut",
+          },
+          0,
+        )
+        .from(
+          ".about-title",
+          {
+            x: 50,
+            autoAlpha: 0,
+            duration: 1.2,
+            ease: "power1.inOut",
+          },
+          0,
+        )
+        .fromTo(
+          ".about-gradient",
+          {
+            clipPath: "inset(0% 0% 100% 0%)",
+            autoAlpha: 0,
+          },
+          {
+            clipPath: "inset(0% 0% 0% 0%)",
+            autoAlpha: 1,
+            duration: 1.8,
+            ease: "power1.inOut",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 70%",
+            },
+          },
+          0.4,
+        );
+    },
+
+    { scope: sectionRef },
+  );
+
   return (
-    <section id='about'>
+    <section
+      id='about'
+      ref={sectionRef}
+    >
       <div className='px-8 lg:px-16 pb-16 ring-1 ring-neutral-700 bg-radial-[at_95%_5%] from-neutral-700 to-background to-40%'>
         <div className='flex flex-col lg:flex-row lg:gap-16 xl:gap-32 justify-between items-center py-24'>
           <div className='relative h-fit'>
@@ -28,14 +93,14 @@ export const About = () => {
           </div>
           <div className='flex flex-col justify-center py-4 lg:w-1/2 mt-12 lg:mt-0'>
             <div className='flex items-center gap-4 mb-8'>
-              <hr className='h-0.5 w-24 border-0 rounded-xl bg-accent2' />
-              <p className='uppercase text-accent2 font-main text-lg'>
+              <hr className='about-hr h-0.5 w-24 border-0 rounded-xl bg-accent2' />
+              <p className='about-title uppercase text-accent2 font-main text-lg'>
                 behind the engineer
               </p>
             </div>
             <p className='text-[2.9rem] leading-14 xl:text-6xl font-main font-bold'>
               Where Passion <br />
-              <span className='text-transparent bg-linear-to-r from-accent3 to-accent2 bg-clip-text'>
+              <span className='about-gradient text-transparent bg-linear-to-r from-accent3 to-accent2 bg-clip-text'>
                 Meets Precision
               </span>
             </p>

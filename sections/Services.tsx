@@ -23,7 +23,7 @@ export const Services = () => {
           scrollTrigger: {
             trigger: section,
             start: "top top",
-            end: "+=550%",
+            end: "+=150%",
             pin: true,
             scrub: true,
           },
@@ -33,7 +33,7 @@ export const Services = () => {
           .to(video, {
             currentTime: duration,
             ease: "none",
-            duration: 1.2,
+            duration: 0.9,
             filter: "brightness(1)",
           })
           .to(video, {
@@ -43,8 +43,9 @@ export const Services = () => {
           })
           .fromTo(
             ".services",
-            { opacity: 0, y: 50 },
+            { opacity: 0, y: 90 },
             { opacity: 1, y: 0, duration: 0.3 },
+            "<0.1",
           );
       };
 
@@ -62,16 +63,18 @@ export const Services = () => {
   return (
     <section
       id='services'
-      className='relative h-screen flex items-center overflow-hidden'
+      className='relative h-fit lg:h-screen flex items-center overflow-hidden'
       ref={sectionRef}
     >
+      {/* run this command (in the directory where the video is in your project) when you decide to animate a video using GSAP so the video does look choppy when scolling */}
+      {/* ffmpeg -i [name-of-video].mp4 -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p [new-name-of-video].mp4 */}
       <video
         src='/videos/output.mp4'
         ref={videoRef}
         muted
         playsInline
         preload='metadata'
-        className='w-full h-full inset-0 absolute object-cover brightness-0'
+        className='w-full h-[125%] lg:h-full absolute -top-[25%] lg:top-0 object-[69%] object-cover brightness-0 origin-bottom'
       />
       <div className='services px-8 lg:px-16 pb-16'>
         <p className='text-4xl lg:text-5xl font-main font-black'>
