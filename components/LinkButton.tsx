@@ -12,10 +12,10 @@ interface LinkButtonProps {
 gsap.registerPlugin(ScrollToPlugin);
 
 export const LinkButton = ({ className, text, target }: LinkButtonProps) => {
-  const element = document.getElementById(target);
-  if (!element) return;
-
   const scrollToSection = () => {
+    const element = document.getElementById(target);
+    if (!element) return;
+
     gsap.to(window, {
       duration: 3,
       scrollTo: {
