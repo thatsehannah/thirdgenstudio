@@ -10,13 +10,16 @@ interface LinkButtonProps {
 gsap.registerPlugin(ScrollToPlugin);
 
 export const LinkButton = ({ className, text, target }: LinkButtonProps) => {
+  const element = document.getElementById(target);
+  if (!element) return;
+
   const scrollToSection = () => {
     gsap.to(window, {
       duration: 3,
       scrollTo: {
-        y: `#${target}`,
+        y: element,
         offsetY: 50,
-        autoKill: true,
+        autoKill: false,
       },
       ease: "power2.inOut",
     });
@@ -26,6 +29,8 @@ export const LinkButton = ({ className, text, target }: LinkButtonProps) => {
     <div
       className='link-btn'
       onClick={scrollToSection}
+      onTouchEnd={scrollToSection}
+      role='button'
     >
       <div
         className={`${className} hover:scale-110 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-lg w-fit font-main py-2 px-4`}
