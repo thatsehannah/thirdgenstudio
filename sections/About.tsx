@@ -1,7 +1,6 @@
 "use client";
 
-import { ProjectCard } from "@/components";
-import { SlotMachineCard } from "@/components/SlotMachineCard";
+import { ProjectCard, SlotMachineCard } from "@/components";
 import { projects } from "@/data";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
