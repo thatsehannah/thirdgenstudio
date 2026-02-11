@@ -90,7 +90,7 @@ export const SlotMachineCard = ({
         </div>
         {suffix && <span className='text-3xl'>{suffix}</span>}
       </div>
-      <p className='text-sm lg:text-lg font-light font-main text-gray-300 uppercase mt-1'>
+      <p className='text-sm xl:text-lg font-light font-main text-gray-300 uppercase mt-1'>
         {subtext}
       </p>
     </div>

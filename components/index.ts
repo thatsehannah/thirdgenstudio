@@ -9,6 +9,7 @@ import { TextareaField } from "./TextareaField.tsx";
 import { ContactForm } from "./ContactForm.tsx";
 import { Footer } from "./Footer.tsx";
 import { SlotMachineCard } from "./SlotMachineCard.tsx";
+import { ProjectCarousel } from "./ProjectCarousel.tsx";
 
 export {
   Logo,
@@ -22,4 +23,5 @@ export {
   ContactForm,
   Footer,
   SlotMachineCard,
+  ProjectCarousel,
 };
