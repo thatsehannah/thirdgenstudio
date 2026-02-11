@@ -7,19 +7,32 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const { thumbnail, title, type, description, link, linkText } = project;
+  const { thumbnail, thumbnailType, title, type, description, link, linkText } =
+    project;
 
   return (
-    <div className='border-8 border-neutral-950 rounded-2xl w-fit lg:w-2xl overflow-hidden h-198'>
+    <div className='border-8 border-neutral-950 rounded-2xl w-fit lg:w-2xl overflow-hidden h-auto lg:h-198'>
       <div className='w-full'>
         <div className='relative'>
-          <Image
-            src={thumbnail}
-            alt={`${title} image`}
-            className='h-auto w-full object-contain rounded-t-lg'
-            width={800}
-            height={600}
-          />
+          {thumbnailType === "image" && (
+            <Image
+              src={thumbnail}
+              alt={`${title} image`}
+              className='h-auto w-full object-contain rounded-t-lg'
+              width={800}
+              height={600}
+            />
+          )}
+          {thumbnailType === "video" && (
+            <video
+              src={thumbnail}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className='h-79 lg:h-123 object-cover aspect-square w-full rounded-t-lg'
+            />
+          )}
           <div className='flex items-center gap-3 justify-center absolute -bottom-6 right-4 rounded-2xl bg-neutral-900 w-fit p-2 lg:p-3 ring-1 ring-neutral-200'>
             {type === "mobile" ? (
               <Smartphone
