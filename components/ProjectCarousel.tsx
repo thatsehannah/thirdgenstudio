@@ -51,23 +51,23 @@ export const ProjectCarousel = () => {
     <div className='flex flex-col gap-4 lg:flex-row lg:gap-0 w-full h-[90vh]'>
       <div className='hidden lg:flex w-1/6 items-center justify-center'>
         <div
-          className='p-6 ring-1 ring-accent3 rounded-md bg-linear-to-r from-accent1 to-accent1 bg-no-repeat bg-size-[0_100%] duration-500 hover:bg-size-[100%_100%] cursor-pointer'
+          className='p-6 ring-1 ring-accent3 rounded-md bg-linear-to-r from-accent1 to-accent1 bg-no-repeat bg-size-[0_100%] duration-500 hover:bg-size-[100%_100%] cursor-pointer bg-right'
           onClick={() => goToPrevProject()}
         >
           <ChevronLeft size={36} />
         </div>
       </div>
       <div className='w-full lg:w-2/3 flex flex-1 flex-col items-center justify-center'>
-        <p className='font-main text-sm font-light mb-4'>
-          {currentIndex + 1} / {projectsLength}
-        </p>
         <div id='project-card'>
           <ProjectCard project={currentProject} />
         </div>
+        <p className='font-main text-sm font-light mt-4'>
+          {currentIndex + 1} / {projectsLength}
+        </p>
       </div>
       <div className='flex lg:hidden items-center justify-center gap-8'>
         <div
-          className='p-6 ring-1 ring-accent3 rounded-md bg-linear-to-r from-accent1 to-accent1 bg-no-repeat bg-size-[0_100%] duration-500 hover:bg-size-[100%_100%] cursor-pointer'
+          className='p-6 ring-1 ring-accent3 rounded-md bg-linear-to-r from-accent1 to-accent1 bg-no-repeat bg-size-[0_100%] duration-500 hover:bg-size-[100%_100%] cursor-pointer bg-right'
           onClick={() => goToPrevProject()}
         >
           <ChevronLeft />
@@ -81,7 +81,7 @@ export const ProjectCarousel = () => {
       </div>
       <div className='hidden lg:flex w-1/6 items-center justify-center'>
         <div
-          className='p-6 ring-1 ring-accent3 rounded-md bg-linear-to-r from-accent1 to-accent1 bg-no-repeat bg-size-[0_100%] duration-500 hover:bg-size-[100%_100%] cursor-pointer'
+          className='p-6 ring-1 ring-accent3 rounded-md bg-linear-to-l from-accent1 to-accent1 bg-no-repeat bg-size-[0_100%] duration-500 hover:bg-size-[100%_100%] cursor-pointer'
           onClick={() => goToNextProject()}
         >
           <ChevronRight size={36} />

@@ -10,7 +10,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   const { thumbnail, title, type, description, link, linkText } = project;
 
   return (
-    <div className='border-8 border-neutral-950 rounded-2xl w-fit lg:w-2xl'>
+    <div className='border-8 border-neutral-950 rounded-2xl w-fit lg:w-2xl overflow-hidden h-198'>
       <div className='w-full'>
         <div className='relative'>
           <Image
