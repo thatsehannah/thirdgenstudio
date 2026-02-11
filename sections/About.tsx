@@ -77,10 +77,10 @@ export const About = () => {
       id='about'
       ref={sectionRef}
     >
-      <div className='px-8 lg:px-16 pb-16 ring-1 ring-neutral-700 bg-radial-[at_95%_5%] from-neutral-700 to-background to-40%'>
+      <div className='px-8 lg:px-16 bg-radial-[at_95%_5%] from-neutral-700 to-background to-40%'>
         <div className='flex flex-col lg:flex-row lg:gap-16 xl:gap-32 justify-between items-center py-24'>
           <div className='relative h-fit'>
-            <div className='absolute -inset-2 rounded-lg bg-linear-to-r from-accent2 to-accent3 opacity-75 blur-lg animate-pulse'></div>
+            <div className='absolute -inset-2 rounded-lg bg-linear-to-r from-accent2 to-accent3 opacity-75 blur-lg animate-pulse' />
             <Image
               src='/images/about.jpg'
               alt='placeholder image'
@@ -123,15 +123,6 @@ export const About = () => {
               />
             </div>
           </div>
-        </div>
-        <div id='projects'>
-          <div className='flex justify-center items-center gap-2 pb-12'>
-            <p className='font-main text-3xl lg:text-4xl xl:text-5xl text-nowrap font-bold'>
-              Flagship <span className='text-accent3'>Creations</span>
-            </p>
-            <hr className='h-0.5 w-3/4 bg-linear-to-r from-accent3/30 to-transparent border-0 rounded-lg' />
-          </div>
-          <ProjectCarousel />
         </div>
       </div>
     </section>

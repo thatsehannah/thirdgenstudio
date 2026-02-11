@@ -4,6 +4,7 @@ import {
   Contact,
   Experience,
   Hero,
+  Projects,
   Services,
   TechStack,
 } from "@/sections";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
+      <Projects />
       <Experience />
       <TechStack />
       <Contact />

@@ -48,7 +48,7 @@ export const ProjectCarousel = () => {
   };
 
   return (
-    <div className='flex flex-col gap-4 lg:flex-row lg:gap-0 w-full h-[90vh]'>
+    <div className='flex flex-col lg:flex-row gap-4 lg:gap-0 py-12'>
       <div className='hidden lg:flex w-1/6 items-center justify-center'>
         <div
           className='p-6 ring-1 ring-accent3 rounded-md bg-linear-to-r from-accent1 to-accent1 bg-no-repeat bg-size-[0_100%] duration-500 hover:bg-size-[100%_100%] cursor-pointer bg-right'
@@ -57,7 +57,7 @@ export const ProjectCarousel = () => {
           <ChevronLeft size={36} />
         </div>
       </div>
-      <div className='w-full lg:w-2/3 flex flex-1 flex-col items-center justify-center'>
+      <div className='w-full lg:w-2/3 flex flex-col items-center justify-center'>
         <div id='project-card'>
           <ProjectCard project={currentProject} />
         </div>

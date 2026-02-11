@@ -11,28 +11,29 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
     project;
 
   return (
-    <div className='border-8 border-neutral-950 rounded-2xl w-fit lg:w-2xl overflow-hidden h-auto lg:h-198'>
+    <div className='border-8 border-neutral-950 rounded-2xl w-fit md:w-125 lg:w-md xl:w-lg 2xl:w-2xl overflow-hidden h-auto md:h-auto 2xl:h-198'>
       <div className='w-full'>
         <div className='relative'>
-          {thumbnailType === "image" && (
-            <Image
-              src={thumbnail}
-              alt={`${title} image`}
-              className='h-auto w-full object-contain rounded-t-lg'
-              width={800}
-              height={600}
-            />
-          )}
-          {thumbnailType === "video" && (
-            <video
-              src={thumbnail}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className='h-79 lg:h-123 object-cover aspect-square w-full rounded-t-lg'
-            />
-          )}
+          <div className='h-68 md:h-90 lg:h-80 xl:h-96 w-full overflow-hidden rounded-t-lg'>
+            {thumbnailType === "image" && (
+              <Image
+                src={thumbnail}
+                alt={`${title} image`}
+                className='object-cover'
+                fill
+              />
+            )}
+            {thumbnailType === "video" && (
+              <video
+                src={thumbnail}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className='w-full h-full object-cover'
+              />
+            )}
+          </div>
           <div className='flex items-center gap-3 justify-center absolute -bottom-6 right-4 rounded-2xl bg-neutral-900 w-fit p-2 lg:p-3 ring-1 ring-neutral-200'>
             {type === "mobile" ? (
               <Smartphone
@@ -51,7 +52,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
         </div>
       </div>
-      <div className='flex flex-col p-8 bg-background rounded-b-lg flex-1'>
+      <div className='flex flex-col p-6 lg:p-8 bg-background rounded-b-lg flex-1 mt-6'>
         <p className='font-main font-bold text-3xl mb-4'>{title}</p>
         <p className='font-main text-neutral-400 mb-6 flex-1'>{description}</p>
         <a
