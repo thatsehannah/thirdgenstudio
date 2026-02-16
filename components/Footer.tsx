@@ -14,6 +14,7 @@ const SocialIcon = ({
     href={link}
     target='_blank'
     className='flex flex-col items-center justify-center gap-2 group'
+    aria-label={title}
   >
     <div className=''>{icon}</div>
     <p className='group-hover:text-white group-hover:scale-105 text-xs font-main uppercase text-neutral-700 transition-all duration-300 font-bold tracking-wider'>
