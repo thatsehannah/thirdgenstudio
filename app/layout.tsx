@@ -20,15 +20,18 @@ export const metadata: Metadata = {
     title: "Third Gen Studio",
     description: "Building web and mobile products the right way",
     url: "https://www.thirdgenstudio.dev",
+    siteName: "Third Gen Studio",
     images: [
       {
         url: "https://www.thirdgenstudio.dev/og_image.png",
         width: 1200,
         height: 630,
         alt: "Third Gen Studio",
+        type: "image/png",
       },
     ],
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
