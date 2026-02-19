@@ -6,7 +6,7 @@ export const experiences: ExperienceItem[] = [
     company: "GoFundMe",
     startEndYear: "2021 - 2022",
     duties:
-      "Automated CI/CD metrics and led a Docker-to-Kubernetes migration to improve deployment consistency and team velocity. Improved developer productivity by optimizing internal tooling and enabling parallel frontend/backend development.",
+      "Designed a mock API architecture that enabled parallel frontend/backend development while collaborating with product and QA teams to ship frontend features on time. Supported CI/CD and infrastructure improvements to enhance productivity and deployment consistency across teams.",
   },
   {
     position: "Software Developer",
