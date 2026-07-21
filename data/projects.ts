@@ -19,7 +19,7 @@ export const projects: ProjectItem[] = [
     description:
       "What started out as a proof of concept for an aspiring musician turned into a passion project for my love of making music. Features a custom built music player with full audio control and a playlist that includes some of my favorite creations.",
     linkText: "Visit Website",
-    link: "https://beatsbyehannah.xyz",
+    link: "https://beatsbyehannah.com",
   },
   {
     title: "Solection",
