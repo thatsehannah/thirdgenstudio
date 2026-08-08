@@ -85,7 +85,7 @@ export const ContactForm = () => {
               <InputField
                 label='name'
                 type='text'
-                placeholder='Tommy Vercetti'
+                placeholder='Your Name'
                 name='name'
               />
             </div>
@@ -94,7 +94,7 @@ export const ContactForm = () => {
                 label='email'
                 type='email'
                 name='email'
-                placeholder='tommyv@vicecity.com'
+                placeholder='youremail@domain.com'
               />
             </div>
           </div>
